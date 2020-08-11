@@ -7,11 +7,11 @@ bodyParser = require('body-parser');
 
 var app = express();
 app.use(bodyParser.json());
-
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/users', usersRouter);
 
-app.listen(4000)
+app.listen(env.proccess.PORT || 4000)
 
 module.exports = app;
