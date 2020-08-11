@@ -12,6 +12,6 @@ require('dotenv').config()
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/users', usersRouter);
 
-app.listen(env.proccess.PORT || 4000)
+app.listen(proccess.env.PORT || 4000)
 
 module.exports = app;
