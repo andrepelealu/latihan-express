@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "voxel_user",
+    "password": "17agustus",
+    "database": "voxeldb",
+    "host": "https://www.db4free.net/",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "voxel_user",
+    "password": "17agustus",
+    "database": "voxeldb",
+    "host": "https://www.db4free.net/",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "voxel_user",
+    "password": "17agustus",
+    "database": "voxeldb",
+    "host": "https://www.db4free.net/",
+    "dialect": "mysql"
+  }
+}
