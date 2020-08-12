@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "voxel_user",
-    "password": "17agustus",
-    "database": "voxeldb",
-    "host": "db4free.net",
+    "username": "bb91f8aed9d732",
+    "password": "ea5d0536",
+    "database": "heroku_a9ca116fd5a5b86",
+    "host": "us-cdbr-east-02.cleardb.com",
     "dialect": "mysql"
   }
 }
