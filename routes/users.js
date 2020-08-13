@@ -181,7 +181,7 @@ router.patch('/:id', async function (req, res, next) {
       })
     }
   } catch (err) {
-    next(er)
+    res.status(400).json(err.message)
   }
 });
 // DELETE users
