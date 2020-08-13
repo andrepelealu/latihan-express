@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "voxel_user",
-    "password": "17agustus",
-    "database": "voxeldb",
-    "host": "db4free.net",
+    "username": "root",
+    "password": "",
+    "database": "voxel2",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {

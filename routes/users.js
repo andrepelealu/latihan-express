@@ -3,7 +3,22 @@ var router = express.Router();
 const model = require('../models/index');
 const { response } = require('../app');
 const { Sequelize } = require('../models/index');
+const middleware = require('../middleware/testingMiddleware')
 const {Op} = Sequelize
+
+//middleware cek usia
+router.get('/cekusia/:usia', middleware.cekUsia, function(req,res){
+    res.json({
+      "keterangan" : "boleh"
+    })
+})
+
+//middleware uppercase 
+router.post('/uppercase', middleware.uppercase, function(req,res){
+  res.json({
+    "message" : req.body.string
+  })
+})
 
 // GET users listing.
 router.get('/find/:id',function(req,res){
@@ -132,7 +147,9 @@ router.post('/pekerjaan', async function (req, res, next) {
 });
 // UPDATE users
 router.patch('/:id', async function (req, res, next) {
+
   try {
+
     const usersId = req.params.id;
     const {
       name,
