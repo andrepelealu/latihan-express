@@ -13,13 +13,14 @@ exports.cekUsia=(req,res,next)=>{
     }
 }
 
-exports.uppercase=(req,res,next)=>{
-    if(!req.body.string){
-        res.json({
-            "message" : "data harus di isi"
-        })
+exports.uppercase= async (req,res,next)=>{
+    try{
+        
+        let data = req.body.string.toUpperCase()
+        next()
+    }catch (err){
+  
     }
-    let data = req.body.string
-    req.body.string = data.toUpperCase();
-    next()
+ 
+
 }

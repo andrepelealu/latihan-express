@@ -14,10 +14,16 @@ router.get('/cekusia/:usia', middleware.cekUsia, function(req,res){
 })
 
 //middleware uppercase 
-router.post('/uppercase', middleware.uppercase, function(req,res){
-  res.json({
-    "message" : req.body.string
-  })
+router.post('/pekerjaan/uppercase', middleware.uppercase, async function(req,res){
+  try{
+    var {pekerjaan} = req.body
+    const send = await model.pekerjaan.create({pekerjaan});
+    res.status(200).json(send)
+  }catch(err){
+    res.status(400).json(err.message)
+  }
+
+
 })
 
 // GET users listing.
@@ -175,11 +181,7 @@ router.patch('/:id', async function (req, res, next) {
       })
     }
   } catch (err) {
-    res.status(400).json({
-      'status': 'ERROR',
-      'messages': err.message,
-      'data': {},
-    })
+    next(er)
   }
 });
 // DELETE users
