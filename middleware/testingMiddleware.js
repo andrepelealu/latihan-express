@@ -16,7 +16,8 @@ exports.cekUsia=(req,res,next)=>{
 exports.uppercase= async (req,res,next)=>{
     try{
         
-        let data = req.body.string.toUpperCase()
+        let data = await req.body.pekerjaan.toUpperCase()
+        req.body.pekerjaan = data
         next()
     }catch (err){
   
